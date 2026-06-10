@@ -1,6 +1,9 @@
-import { Recycle, Github, Linkedin, Mail } from 'lucide-react';
+import { Recycle, Github, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Footer.css';
+
+const githubUrl = 'https://github.com/temizist/temizist.github.io';
+const emailAddress = 'mailto:temizistapp@gmail.com';
 
 const Footer = () => {
     const { t } = useLanguage();
@@ -40,13 +43,10 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4 className="footer-title">{t('contact')}</h4>
                         <div className="social-links">
-                            <a href="#" className="social-link" aria-label="GitHub">
+                            <a href={githubUrl} className="social-link" aria-label="GitHub">
                                 <Github size={20} />
                             </a>
-                            <a href="#" className="social-link" aria-label="LinkedIn">
-                                <Linkedin size={20} />
-                            </a>
-                            <a href="#" className="social-link" aria-label="Email">
+                            <a href={emailAddress} className="social-link" aria-label="Email">
                                 <Mail size={20} />
                             </a>
                         </div>
