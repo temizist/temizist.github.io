@@ -2,6 +2,8 @@ import { Recycle, Download, Smartphone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
+const appStoreUrl = 'https://play.google.com/store/apps/details?id=host.exp.exponent&hl=tr&pli=1';
+
 const Hero = () => {
     const { t } = useLanguage();
 
@@ -32,10 +34,10 @@ const Hero = () => {
                         </p>
 
                         <div className="hero-cta">
-                            <button className="btn btn-primary btn-lg">
+                            <a className="btn btn-primary btn-lg" href={appStoreUrl}>
                                 <Download size={20} />
                                 {t('downloadNow')}
-                            </button>
+                            </a>
                             <button className="btn btn-outline btn-lg" onClick={() => scrollToSection('how-it-works')}>
                                 <Smartphone size={20} />
                                 {t('howItWorksBtn')}

@@ -3,6 +3,8 @@ import { Recycle, Menu, X, Languages } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Header.css';
 
+const appStoreUrl = 'https://play.google.com/store/apps/details?id=host.exp.exponent&hl=tr&pli=1';
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { language, toggleLanguage, t } = useLanguage();
@@ -40,9 +42,9 @@ const Header = () => {
                             <span>{language === 'tr' ? 'EN' : 'TR'}</span>
                         </button>
 
-                        <button className="btn btn-primary btn-sm">
+                        <a className="btn btn-primary btn-sm" href={appStoreUrl}>
                             {t('downloadNow')}
-                        </button>
+                        </a>
                     </div>
 
                     <button
